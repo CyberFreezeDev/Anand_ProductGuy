@@ -1,3 +1,8 @@
+Sure! We can enhance the `styles.css` file by adding some animations that trigger when each section comes into view as you scroll. We'll use CSS animations and the Intersection Observer API in JavaScript to achieve this effect.
+
+Here's the updated `styles.css` file with enhanced styles and animations:
+
+```css
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -49,6 +54,14 @@ main {
 
 section {
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2, h3, h4 {
