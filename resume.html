@@ -150,5 +150,24 @@
 
             <h3>PASSIONS </h3>
             <li>Environmental awareness, reading technology blogs, Learning low code products such as Power Apps, Mendix, etc., Classical Music, writing reviews on Food and Movies, badminton.</li>
-            
+            <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+        </body>
             
